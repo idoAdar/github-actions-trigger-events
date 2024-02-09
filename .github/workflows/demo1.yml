@@ -1,12 +1,19 @@
+# Complex trigger event for pull request, manual trigger, and push
+# Notice: Not all events have types for configuration and/or filters
+
 name: Events Demo 1
 on:
-  # Complex trigger event for pull request (with action types) and manual trigger
   pull_request:
     types:
       - opened
       - reopened
-  workflow_dispatch:
+    branches:
+      - master
   # types: [opened, edited, reopened] Alternative syntax
+  workflow_dispatch:
+  push:
+    branches:
+      - master # Fire only when pushing code to master branch
 jobs:
   deploy:
     runs-on: ubuntu-latest

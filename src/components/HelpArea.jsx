@@ -13,7 +13,7 @@ const HELP_ITEMS = [
     text: 'GitHub is a company and online offering, providing you with tons of Git-related services (e.g., cloud repositories).',
   },
   {
-    id: 'h3',
+    id: 'h2',
     title: 'What is GitHub Actions?',
     text: 'GitHub Actions is an automation service (or CI / CD service) that helps you automate repository-related workflows and processes.',
   },
@@ -21,8 +21,8 @@ const HELP_ITEMS = [
 
 function HelpArea() {
   return (
-    <section data-testid="help-area" id="help-area">
-      {HELP_ITEMS.map((item) => (
+    <section data-testid='help-area' id='help-area'>
+      {HELP_ITEMS.map(item => (
         <HelpBox key={item.id} title={item.title} text={item.text} />
       ))}
     </section>

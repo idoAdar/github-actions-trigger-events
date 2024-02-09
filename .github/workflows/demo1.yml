@@ -1,5 +1,9 @@
 # Complex trigger event for pull request, manual trigger, and push
 # Notice: Not all events have types for configuration and/or filters
+# It worth notice that if we add to the commit message "skip ci" its will not trigger that workflow,
+#  even if the workflow should trigger by the "on" method.
+# It's relevent in case you just want to push something to your repo without trigger the workflow.
+# git commit -m "added comments [skip ci]"
 
 name: Events Demo 1
 on:
